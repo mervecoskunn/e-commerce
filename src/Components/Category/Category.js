@@ -25,7 +25,7 @@ import styles from "./category.module.scss"
     {
         img:cat4,
         name:"women's clothing",
-        id:"1"
+        id:"4"
     }
 
 

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import styles from './productcard.module.scss'
-import addToCart from '../../Redux/features/Cart/CartSlice';
+import {addToCart} from '../../Redux/features/Cart/CartSlice';
 
 const ProductCard =({product})=> {
   const title = product?.title.slice(0,20);

@@ -43,13 +43,13 @@ export const CartSlice=createSlice({
         },
         reduceProduct(state,action){
             const itemIndex = state.cart.findIndex((item)=>item.id === action.payload.id);
-            if(state.cart[itemIndex].quantity>1){
-                state.cart[itemIndex].quantity -=1;
+            if(state.cart[itemIndex].quantity > 1){
+                state.cart[itemIndex].quantity -= 1;
             }else{
-                const updatedCart =state.cart.filter((p)=>p.id!==action.payload.id);
+                const updatedCart =state.cart.filter((p)=>p.id !== action.payload.id);
                 state.cart =updatedCart;
             }
-            localStorage.setitem("cart",JSON.stringify(state.cart));
+            localStorage.setItem("cart",JSON.stringify(state.cart));
         },
         incrementProduct(state,action){
             const itemIndex = state.cart.findIndex((item)=> item.id === action.payload.id);

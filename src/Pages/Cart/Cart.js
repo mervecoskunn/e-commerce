@@ -53,8 +53,8 @@ const Cart = () =>{
                 <button className={`${styles.cartBtn} fw-bold`}
                          onClick={()=>dispatch(incrementProduct(product))}>+</button>
                          <h6>{product.quantity}</h6>
-                         <button className={`${styles.cartBtn} fw-bold`}
-                         onClick={()=>dispatch(reduceProduct(product))}>-</button>
+                <button className={`${styles.cartBtn} fw-bold`}
+                        onClick={() => dispatch(reduceProduct(product))}>-</button>
               </div>
               <div>
                 <h6>${(product.price * product.quantity).toFixed(2)}</h6>
