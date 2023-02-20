@@ -41,9 +41,9 @@ const Naav = () =>{
                         </NavLink>
                         
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls ="navbarScrooll" />
-                    <Navbar.Collapse id="navbarScrooll ">
-                        <Nav className="ms-auto my-2 my-lg-0" style={{maxHeight:"100px" }} navbarScrooll>
+                    <Navbar.Toggle aria-controls ="navbarScroll" />
+                    <Navbar.Collapse id="navbarScroll ">
+                        <Nav className="ms-auto my-2 my-lg-0" style={{maxHeight:"100px" }} navbarScroll>
                             {
                              menus.map((menu)=>(
                                  <NavLink
