@@ -20,7 +20,7 @@ export default function useFetch(url){
 
                 try{
                     setLoading(true);
-                    const response= await axios.get(`$ {base_url + url}`);
+                    const response= await axios.get(`${base_url+url}`);
                     setData(response.data);
                 }
                 catch(err){
