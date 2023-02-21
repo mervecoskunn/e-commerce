@@ -16,6 +16,7 @@ const dispatch =useDispatch();
 
 // todo: wishlist
 
+
 const {data,error,loading} =useFetch(`/${id}`);
 if(!error && loading){
     return < Loader />
