@@ -19,6 +19,7 @@ export default function useFetch(url){
              (async function(){
 
                 try{
+                    // console.log(url);
                     setLoading(true);
                     const response= await axios.get(`${base_url+url}`);
                     setData(response.data);

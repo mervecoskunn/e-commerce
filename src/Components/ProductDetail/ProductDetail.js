@@ -47,7 +47,8 @@ const productHandler = () => {
    <div className='pt-3'>
     <h4>{data?.title}</h4>
     <h6 className='text-success'>
-     {data?.raiting.count>1 && "In Stock"}
+     {data?.rating.count>1 && "In Stock"}
+     
     </h6>
     <h6>Category : {data?.category}</h6>
                     <p className='py-1'>{data?.description}</p>
