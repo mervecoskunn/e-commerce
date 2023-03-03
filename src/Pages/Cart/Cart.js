@@ -4,6 +4,7 @@ import styles from './cart.module.scss';
 import { useDispatch, useSelector } from "react-redux";
 import {removeFromCart, removeAll, incrementProduct, reduceProduct} from '../../Redux/features/Cart/CartSlice'
 import { toast } from 'react-toastify'
+import {addToWishList} from '../../Redux/features/Wishlist/WishListSlice'
 
 const Cart = () =>{
   const dispatch =useDispatch();
@@ -16,7 +17,12 @@ const Cart = () =>{
     );
      //remove butonuna tiklandiginda urunun silinmesi
     const removeProductHandler = (product) =>{
+     alert("Would you like to add to your wishlist?");
+     
       dispatch(removeFromCart(product));
+      dispatch(addToWishList(product));
+
+
       toast.warning(`${product.title.slice(0,20)} is removed from cart`,{
         autoClose: 1000
       
